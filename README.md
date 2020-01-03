@@ -20,3 +20,9 @@ chmod -R 755 LCD-show-Kali\
 cd LCD-show-Kali\
 sudo ./LCD35-HDMI-600x400-show
  
+-------for HDMI recovery--------------\
+sudo rm -rf LCD-show-Kali\
+git clone github.com/lcddiy/LCD-show-Kali.git\
+chmod -R 755 LCD-show-Kali\
+cd LCD-show-Kali\
+sudo ./LCD-hdmi
