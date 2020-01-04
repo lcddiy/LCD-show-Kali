@@ -3,6 +3,10 @@
 if [ -f /etc/X11/xorg.conf.d/40-libinput.conf ]; then
 sudo rm -rf /etc/X11/xorg.conf.d/40-libinput.conf
 fi
+dpkg -l | grep -q "xserver-xorg-input-libinput"
+if [ $? -eq 0 ]; then
+sudo apt-get purge xserver-xorg-input-libinput -y
+fi
 if [ ! -d /etc/X11/xorg.conf.d ]; then
 sudo mkdir -p /etc/X11/xorg.conf.d
 fi
